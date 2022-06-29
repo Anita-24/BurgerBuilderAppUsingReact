@@ -1,0 +1,16 @@
+.NavigationItems {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+}
+
+@media (min-width: 500px) {
+    /*IT IS THE MIN_WIDTH At Which the style start to apply*/
+    .NavigationItems {
+        flex-flow: row;
+    }
+}
