@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Aux from "../../hoc/Auxiliary";
 import classes from "./Layout.css";
 import ToolBar from "../Navigation/Toolbar/Toolbar";
-import SideBar from "../Navigation/Sidebar/Sidebar";
+import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 
 class Layout extends Component {
   state = {
@@ -12,18 +12,17 @@ class Layout extends Component {
   sideDrawerClosedhandler = () => {
     this.setState({ showSideDrawer: false });
   };
-
   sideToggleHandler = () => {
-    this.setState((prevState) => {
-      return { showSideDrawer: !prevState.showSideDrawer };
-    });
-  };
+    this.setState( ( prevState ) => {
+        return { showSideDrawer: !prevState.showSideDrawer };
+    } );
+}
 
   render() {
     return (
       <Aux>
         <ToolBar drawerToggleClicked={this.sideToggleHandler}/>
-        <SideBar
+        <SideDrawer
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedhandler}
         />
