@@ -20,7 +20,7 @@ const burger = (props) => {
   }
 
 
-  console.log("TransformedIngredients>>>>>>>>>>>>>>>", TransformedIngredients);
+  // console.log("TransformedIngredients>>>>>>>>>>>>>>>", TransformedIngredients);
 
   return (
     <div className={classes.Burger}>
